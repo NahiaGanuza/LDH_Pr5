@@ -6,7 +6,7 @@ import es.ull.passengers.Passenger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class flight_test {
+public class FlightTest {
     
     private Flight flight;
     private Passenger passenger1;
