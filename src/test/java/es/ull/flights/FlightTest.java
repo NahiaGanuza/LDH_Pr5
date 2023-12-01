@@ -17,7 +17,7 @@ public class FlightTest {
         // Configuración inicial para las pruebas
         flight = new Flight("AB123", 2); // Se crea un vuelo con 2 asientos disponibles
         passenger1 = new Passenger("ID1", "John", "US");
-        passenger2 = new Passenger("ID2", "Jane", "UK");
+        passenger2 = new Passenger("ID2", "Jane", "GB");
     }
 
     @Test
