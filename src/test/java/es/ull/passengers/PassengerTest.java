@@ -45,7 +45,7 @@ public class PassengerTest {
 
         // Agregar algunos pasajeros de prueba
         Passenger passenger1 = new Passenger("ABC123", "John Doe", "US");
-        Passenger passenger2 = new Passenger("XYZ789", "Jane Smith", "UK");
+        Passenger passenger2 = new Passenger("XYZ789", "Jane Smith", "GB");
         flight.addPassenger(passenger1);
         flight.addPassenger(passenger2);
 
