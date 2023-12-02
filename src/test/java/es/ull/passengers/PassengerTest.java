@@ -22,7 +22,7 @@ public class PassengerTest {
         // Se espera que el constructor lance una RuntimeException para un código de país inválido
         assertThrows(RuntimeException.class, () -> new Passenger("ID001", "John Doe", "INVALID"));
     }
-    
+
     @Test
     public void testConstructorPassenger() {
         assertNotNull(passenger);
@@ -56,6 +56,19 @@ public class PassengerTest {
         passenger.joinFlight(flight);
         assertEquals(flight, passenger.getFlight());
         assertEquals(1, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    public void testJoinFlight_AddPassengerFails() {
+        // Configuración del mock de Flight con comportamiento para simular un fallo al agregar un pasajero
+        Flight mockFlight = mock(Flight.class);
+        when(mockFlight.addPassenger(any())).thenReturn(false);
+
+        Passenger passenger = new Passenger("ID001", "John Doe", "US");
+        passenger.setFlight(new Flight("AB123", 100)); // Establecer un vuelo previo
+
+        // Se espera una RuntimeException porque no se puede agregar el pasajero al nuevo vuelo
+        assertThrows(RuntimeException.class, () -> passenger.joinFlight(mockFlight));
     }
 
     @Test
