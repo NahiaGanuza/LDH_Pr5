@@ -36,5 +36,10 @@ public class PassengerTest {
         assertEquals("John Doe", passenger.getName());
     }
 
+    @Test
+    public void testGetCountryCode() {
+        assertEquals("US", passenger.getCountryCode());
+    }
+
 
 }
