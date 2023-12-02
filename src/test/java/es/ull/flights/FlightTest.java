@@ -11,6 +11,7 @@ public class FlightTest {
     private Flight flight;
     private Passenger passenger1;
     private Passenger passenger2;
+    private Passenger passenger3;
 
     @BeforeEach
     public void setUp() {
