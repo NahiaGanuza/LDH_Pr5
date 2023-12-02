@@ -18,6 +18,7 @@ public class FlightTest {
         flight = new Flight("AB123", 2); // Se crea un vuelo con 2 asientos disponibles
         passenger1 = new Passenger("ID1", "John", "US");
         passenger2 = new Passenger("ID2", "Jane", "ES");
+        passenger3 = new Passenger("ID3", "Marie", "ES");
     }
 
     @Test
@@ -61,6 +62,14 @@ public class FlightTest {
     public void testAddPassenger() {
         assertTrue(flight.addPassenger(passenger1));
         assertEquals(1, flight.getNumberOfPassengers());
+    }
+
+    @Test
+    public void testAddPassengerExceedSeats() {
+        assertTrue(flight.addPassenger(passenger1));
+        assertTrue(flight.addPassenger(passenger2));
+        assertEquals(2, flight.getNumberOfPassengers());
+        assertThrows(RuntimeException.class, () -> flight.addPassenger(passenger3));
     }
     
     @Test
