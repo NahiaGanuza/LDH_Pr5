@@ -26,5 +26,10 @@ public class PassengerTest {
         assertEquals("US", passenger.getCountryCode());
     }
 
+    @Test
+    public void testGetIdentifier() {
+        assertEquals("ID001", passenger.getIdentifier());
+    }
+
 
 }
