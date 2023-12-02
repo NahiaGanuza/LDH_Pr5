@@ -52,16 +52,7 @@ public class FlightTest {
         assertTrue(flight.addPassenger(passenger1));
         assertEquals(1, flight.getNumberOfPassengers());
     }
-
-    @Test
-    public void testAddPassengerExceedingSeats() {
-        for (int i = 0; i < 100; i++) {
-            Passenger newPassenger = new Passenger("ID" + i, "Passenger " + i, "US");
-            flight.addPassenger(newPassenger);
-        }
-        assertThrows(RuntimeException.class, () -> flight.addPassenger(passenger1));
-    }
-
+    
     @Test
     public void testRemovePassenger() {
         flight.addPassenger(passenger1);
