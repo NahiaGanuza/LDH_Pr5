@@ -44,6 +44,13 @@ public class PassengerTest {
     @Test
     public void testGetFlightInitiallyNull() {
         assertNull(passenger.getFlight());
+    }
+
+    @Test
+    public void testJoinFlight() {
+        passenger.joinFlight(flight);
+        assertEquals(flight, passenger.getFlight());
+        assertEquals(1, flight.getNumberOfPassengers());
     }    
 
 
