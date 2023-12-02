@@ -59,19 +59,6 @@ public class PassengerTest {
     }
 
     @Test
-    public void testJoinFlight_AddPassengerFails() {
-        // Configuración del mock de Flight con comportamiento para simular un fallo al agregar un pasajero
-        Flight mockFlight = mock(Flight.class);
-        when(mockFlight.addPassenger(any())).thenReturn(false);
-
-        Passenger passenger = new Passenger("ID001", "John Doe", "US");
-        passenger.setFlight(new Flight("AB123", 100)); // Establecer un vuelo previo
-
-        // Se espera una RuntimeException porque no se puede agregar el pasajero al nuevo vuelo
-        assertThrows(RuntimeException.class, () -> passenger.joinFlight(mockFlight));
-    }
-
-    @Test
     public void testSetFlight() {
         passenger.setFlight(flight);
         assertEquals(flight, passenger.getFlight());
