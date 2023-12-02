@@ -53,4 +53,11 @@ public class FlightTest {
         assertEquals(1, flight.getNumberOfPassengers());
     }
 
+    @Test
+    public void testRemovePassenger() {
+        flight.addPassenger(passenger);
+        assertTrue(flight.removePassenger(passenger));
+        assertEquals(0, flight.getNumberOfPassengers());
+    }
+
 }
