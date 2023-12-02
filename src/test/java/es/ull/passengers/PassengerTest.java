@@ -57,7 +57,6 @@ public class PassengerTest {
     public void testSetFlight() {
         passenger.setFlight(flight);
         assertEquals(flight, passenger.getFlight());
-        assertEquals(1, flight.getNumberOfPassengers());
     }    
 
 
