@@ -41,5 +41,10 @@ public class PassengerTest {
         assertEquals("US", passenger.getCountryCode());
     }
 
+    @Test
+    public void testGetFlightInitiallyNull() {
+        assertNull(passenger.getFlight());
+    }    
+
 
 }
