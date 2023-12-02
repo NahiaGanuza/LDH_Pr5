@@ -31,5 +31,10 @@ public class PassengerTest {
         assertEquals("ID001", passenger.getIdentifier());
     }
 
+    @Test
+    public void testGetName() {
+        assertEquals("John Doe", passenger.getIdentifier());
+    }
+
 
 }
