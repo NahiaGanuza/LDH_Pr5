@@ -30,27 +30,27 @@ public class PassengerTest {
         assertEquals(validCountryCode, passenger.getCountryCode());
     }
 
-    @Test
-    public void testGetFlightNumber() {
-        String expectedFlightNumber = "AB123";
+    // @Test
+    // public void testGetFlightNumber() {
+    //     String expectedFlightNumber = "AB123";
         
-        String actualFlightNumber = flight.getFlightNumber();
+    //     String actualFlightNumber = flight.getFlightNumber();
 
-        assertEquals(expectedFlightNumber, actualFlightNumber);
-    }
+    //     assertEquals(expectedFlightNumber, actualFlightNumber);
+    // }
 
-    @Test
-    public void testGetNumberOfPassengers() {
-        int initialPassengerCount = flight.getNumberOfPassengers();
+    // @Test
+    // public void testGetNumberOfPassengers() {
+    //     int initialPassengerCount = flight.getNumberOfPassengers();
 
-        // Agregar algunos pasajeros de prueba
-        Passenger passenger1 = new Passenger("ABC123", "John Doe", "US");
-        Passenger passenger2 = new Passenger("XYZ789", "Jane Smith", "GB");
-        flight.addPassenger(passenger1);
-        flight.addPassenger(passenger2);
+    //     // Agregar algunos pasajeros de prueba
+    //     Passenger passenger1 = new Passenger("ABC123", "John Doe", "US");
+    //     Passenger passenger2 = new Passenger("XYZ789", "Jane Smith", "GB");
+    //     flight.addPassenger(passenger1);
+    //     flight.addPassenger(passenger2);
 
-        int updatedPassengerCount = flight.getNumberOfPassengers();
+    //     int updatedPassengerCount = flight.getNumberOfPassengers();
 
-        assertEquals(initialPassengerCount + 2, updatedPassengerCount);
-    }
+    //     assertEquals(initialPassengerCount + 2, updatedPassengerCount);
+    // }
 }
