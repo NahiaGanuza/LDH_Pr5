@@ -33,7 +33,7 @@ public class PassengerTest {
 
     @Test
     public void testGetName() {
-        assertEquals("John Doe", passenger.getIdentifier());
+        assertEquals("John Doe", passenger.getName());
     }
 
 
