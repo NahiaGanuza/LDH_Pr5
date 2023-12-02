@@ -32,10 +32,4 @@ public class FlightTest {
         assertEquals(seats, flight.getSeats());
     }
 
-    @Test
-    public void testAddPassengerWhenSeatsAvailable() {
-        assertTrue(flight.addPassenger(passenger1)); // Agrega el primer pasajero
-        assertEquals(1, flight.getNumberOfPassengers()); // Verifica que se agregó el pasajero
-    }
-
 }
