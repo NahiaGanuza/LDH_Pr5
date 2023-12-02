@@ -9,25 +9,21 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PassengerTest {
     
     private Flight flight;
+    private Passenger passenger;
 
     @BeforeEach
     public void setUp() {
         // Crear un vuelo de ejemplo para usar en las pruebas
+        passenger = new Passenger("ID001", "John Doe", "US");
         flight = new Flight("AB123", 100);
     }
 
     @Test
     public void testConstructorPassenger() {
-        String identifier = "ABC123";
-        String name = "John Doe";
-        String validCountryCode = "US";
-
-        Passenger passenger = new Passenger(identifier, name, validCountryCode);
-
         assertNotNull(passenger);
-        assertEquals(identifier, passenger.getIdentifier());
-        assertEquals(name, passenger.getName());
-        assertEquals(validCountryCode, passenger.getCountryCode());
+        assertEquals("ID001", passenger.getIdentifier());
+        assertEquals("John Doe", passenger.getName());
+        assertEquals("US", passenger.getCountryCode());
     }
 
 
