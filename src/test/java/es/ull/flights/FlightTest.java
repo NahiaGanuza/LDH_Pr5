@@ -22,10 +22,11 @@ public class FlightTest {
 
     @Test
     public void testInvalidFlightNumber() {
-        String invalidFlightNumber = "ABC123";
-        int seats = 100;
+        // Definir un número de vuelo que no cumpla con el patrón regex esperado
+        String invalidFlightNumber = "InvalidFlightNumber";
 
-         assertThrows(RuntimeException.class, () -> new Flight(validFlightNumber, seats));
+        // Se espera que el constructor lance una RuntimeException debido a un número de vuelo inválido
+        assertThrows(RuntimeException.class, () -> new Flight(invalidFlightNumber, 100));
  
     }
 
