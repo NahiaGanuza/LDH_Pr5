@@ -59,7 +59,7 @@ public class FlightTest {
             Passenger newPassenger = new Passenger("ID" + i, "Passenger " + i, "US");
             flight.addPassenger(newPassenger);
         }
-        assertThrows(RuntimeException.class, () -> flight.addPassenger(passenger));
+        assertThrows(RuntimeException.class, () -> flight.addPassenger(passenger1));
     }
 
     @Test
