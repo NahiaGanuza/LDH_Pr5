@@ -61,7 +61,7 @@ public class PassengerTest {
 
     @Test
     public void testToString() {
-        assertEquals("Passenger Jonh Doe with identifier: ID001 from US", passenger.toString());
+        assertEquals("Passenger John Doe with identifier: ID001 from US", passenger.toString());
     } 
 
 }
