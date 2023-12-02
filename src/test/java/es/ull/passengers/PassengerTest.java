@@ -59,5 +59,9 @@ public class PassengerTest {
         assertEquals(flight, passenger.getFlight());
     }    
 
+    @Test
+    public void testToString() {
+        assertEquals("Passenger Jonh Doe with identifier: ID001 from US", passenger.toString());
+    } 
 
 }
