@@ -17,7 +17,12 @@ public class PassengerTest {
         passenger = new Passenger("ID001", "John Doe", "US");
         flight = new Flight("AB123", 100);
     }
-
+    @Test
+    public void testInvalidCountryCodeConstructor() {
+        // Se espera que el constructor lance una RuntimeException para un código de país inválido
+        assertThrows(RuntimeException.class, () -> new Passenger("ID001", "John Doe", "INVALID"));
+    }
+    
     @Test
     public void testConstructorPassenger() {
         assertNotNull(passenger);
