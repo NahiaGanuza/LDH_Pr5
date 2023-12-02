@@ -57,6 +57,14 @@ public class PassengerTest {
     public void testSetFlight() {
         passenger.setFlight(flight);
         assertEquals(flight, passenger.getFlight());
+    }
+
+    @Test
+    public void testSetFlightNull() {
+        passenger.setFlight(flight);
+        passenger.setFlight(null);
+        assertNull(passenger.getFlight());
+        assertEquals(0, flight.getNumberOfPassengers());
     }    
 
     @Test
