@@ -22,6 +22,11 @@ public class FlightTest {
 
     @Test
     public void testConstructorValidFlightNumber() {
+        assertThrows(RuntimeException.class(), () -> new Flight("ABD123", 100));
+    }
+
+    @Test
+    public void testConstructorValidFlightNumber() {
         String validFlightNumber = "AB123";
         int seats = 100;
 
