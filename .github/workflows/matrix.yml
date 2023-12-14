@@ -4,12 +4,12 @@ on: [push]
 jobs:
   build:
 
-    runs-on:${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       max-parallel: 2
       matrix:
-        os:[ubuntu-latest, windows-latest, macos-latest]
-        java:[17,11,8]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        java: [17,11,8]
       steps:
       - uses: actions/checkout@v3
 
