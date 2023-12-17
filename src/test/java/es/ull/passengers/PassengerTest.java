@@ -22,7 +22,7 @@ public class PassengerTest {
     * Test case to verify that a RuntimeException is thrown when an invalid country code is provided to the constructor.
     */
     @Test
-    public void testInvalidCountryCodeConstructor() {
+    void testInvalidCountryCodeConstructor() {
         // Se espera que el constructor lance una RuntimeException para un código de país inválido
         assertThrows(RuntimeException.class, () -> new Passenger("ID001", "John Doe", "INVALID"));
     }
@@ -32,7 +32,7 @@ public class PassengerTest {
     * It verifies that the constructor initializes the passenger object correctly.
     */
     @Test
-    public void testConstructorPassenger() {
+    void testConstructorPassenger() {
         assertNotNull(passenger);
         assertEquals("ID001", passenger.getIdentifier());
         assertEquals("John Doe", passenger.getName());
@@ -43,7 +43,7 @@ public class PassengerTest {
      * Test case for the getIdentifier() method.
      */
     @Test
-    public void testGetIdentifier() {
+    void testGetIdentifier() {
         assertEquals("ID001", passenger.getIdentifier());
     }
 
@@ -51,7 +51,7 @@ public class PassengerTest {
      * Test case for the getName() method.
      */
     @Test
-    public void testGetName() {
+    void testGetName() {
         assertEquals("John Doe", passenger.getName());
     }
     
@@ -59,7 +59,7 @@ public class PassengerTest {
      * Test case for the getCountryCode() method.
      */
     @Test
-    public void testGetCountryCode() {
+    void testGetCountryCode() {
         assertEquals("US", passenger.getCountryCode());
     }
 
@@ -67,7 +67,7 @@ public class PassengerTest {
     * Test case to verify that the initial flight of a passenger is null.
     */
     @Test
-    public void testGetFlightInitiallyNull() {
+    void testGetFlightInitiallyNull() {
         assertNull(passenger.getFlight());
     }
 
@@ -78,7 +78,7 @@ public class PassengerTest {
      * It checks if the passenger's flight is set correctly and if the number of passengers in the flight is updated.
      */
     @Test
-    public void testJoinFlight() {
+    void testJoinFlight() {
         passenger.joinFlight(flight);
         assertEquals(flight, passenger.getFlight());
         assertEquals(1, flight.getNumberOfPassengers());
@@ -89,7 +89,7 @@ public class PassengerTest {
      * It verifies that the setFlight method correctly sets the flight for a passenger.
      */
     @Test
-    public void testSetFlight() {
+    void testSetFlight() {
         passenger.setFlight(flight);
         assertEquals(flight, passenger.getFlight());
     }
@@ -99,7 +99,7 @@ public class PassengerTest {
     * It checks if the passenger's flight is set to null and if the number of passengers in the flight is updated accordingly.
     */
     @Test
-    public void testSetFlightNull() {
+    void testSetFlightNull() {
         passenger.setFlight(flight);
         passenger.setFlight(null);
         assertNull(passenger.getFlight());
@@ -111,7 +111,7 @@ public class PassengerTest {
      * It verifies that the toString() method returns the expected string representation of a Passenger object.
      */
     @Test
-    public void testToString() {
+    void testToString() {
         assertEquals("Passenger John Doe with identifier: ID001 from US", passenger.toString());
     } 
 
