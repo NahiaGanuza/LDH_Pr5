@@ -26,7 +26,7 @@ public class FlightTest {
      * Test case to verify the behavior of the Flight constructor when an invalid flight number is provided.
      */
     @Test
-    public void testInvalidFlightNumber() {
+    void testInvalidFlightNumber() {
         // Definir un número de vuelo que no cumpla con el patrón regex esperado
         String invalidFlightNumber = "InvalidFlightNumber";
 
@@ -39,7 +39,7 @@ public class FlightTest {
      * Test case for the constructor with a valid flight number.
      */
     @Test
-    public void testConstructorValidFlightNumber() {
+    void testConstructorValidFlightNumber() {
         String validFlightNumber = "AB123";
         int seats = 100;
 
@@ -56,7 +56,7 @@ public class FlightTest {
      * This test verifies that the correct flight number is returned by the getFlightNumber() method.
      */
     @Test
-    public void testGetFlightNumber() {
+    void testGetFlightNumber() {
         assertEquals("AB123", flight.getFlightNumber());
     }
 
@@ -64,7 +64,7 @@ public class FlightTest {
      * Test case for the getSeats() method.
      */
     @Test
-    public void testGetSeats() {
+    void testGetSeats() {
         assertEquals(2, flight.getSeats());
     }
 
@@ -72,7 +72,7 @@ public class FlightTest {
      * Test case for the getNumberOfPassengers method.
      */
     @Test
-    public void testGetNumberOfPassengers() {
+    void testGetNumberOfPassengers() {
         assertEquals(0, flight.getNumberOfPassengers());
     }
         
@@ -81,7 +81,7 @@ public class FlightTest {
      * It verifies that a passenger is successfully added to the flight and the number of passengers is updated accordingly.
      */
     @Test
-    public void testAddPassenger() {
+    void testAddPassenger() {
         assertTrue(flight.addPassenger(passenger1));
         assertEquals(1, flight.getNumberOfPassengers());
     }
@@ -92,7 +92,7 @@ public class FlightTest {
      * expecting a RuntimeException to be thrown.
      */
     @Test
-    public void testAddPassengerExceedSeats() {
+    void testAddPassengerExceedSeats() {
         assertTrue(flight.addPassenger(passenger1));
         assertTrue(flight.addPassenger(passenger2));
         assertEquals(2, flight.getNumberOfPassengers());
@@ -104,7 +104,7 @@ public class FlightTest {
     * It verifies that a passenger is successfully removed from the flight.
     */
     @Test
-    public void testRemovePassenger() {
+    void testRemovePassenger() {
         flight.addPassenger(passenger1);
         assertEquals(true, flight.removePassenger(passenger1));
         assertEquals(0, flight.getNumberOfPassengers());
